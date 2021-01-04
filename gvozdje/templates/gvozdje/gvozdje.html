@@ -1,0 +1,40 @@
+{% extends 'gvozdje/main.html' %}
+
+
+{% block content %}
+
+{% include 'gvozdje/statusGvozdje.html' %}
+
+<hr class = "row">
+
+    <div class="col-md-5"></div>
+    <h2>GVOZDJE panel:</h2>
+
+    <hr>
+
+    <div class="card card-body">
+        <table class="table table-sm">
+            <tr>
+                <th></th>
+                <th>naziv</th>
+                <th>cena</th>
+                <th>jedinica mere</th>
+
+            </tr>
+            {% for i in gvozdje %}
+            <tr>
+                 <td></td>
+                 <td>{{i.naziv}}</td>
+                 <td>{{i.cena_DIN}}</td>
+                 <td>{{i.jedinicaMere}}</td>
+
+
+            </tr>
+
+
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
+
